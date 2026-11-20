@@ -6,6 +6,7 @@
 <title>Tenet: Scroll With Intent</title>
 <meta name="description" content="Tenet helps you spend less time scrolling with daily app limits, a Shorts and Reels counter and focus sessions. Privacy policy and account deletion.">
 <style>
+  caption { text-align: left; color: var(--muted); padding-bottom: 6px; }
   :root {
     --bg: #f4f6f1; --card: #ffffff; --fg: #1f2421; --muted: #5b635d;
     --accent: #4a7c0f; --line: #dfe4da;
@@ -66,7 +67,7 @@
     <li>Daily limits for social, video and game apps, with a calm block screen when a limit runs out.</li>
     <li>YouTube stays open; only time in the Shorts player counts.</li>
     <li>A Reels and Shorts counter, streaks, goals and weekly stats.</li>
-    <li>Focus sessions: calls, messages, maps, emergency apps and Android Settings always stay open, and you can end a session early at any time.</li>
+    <li>Focus sessions: calls, text messages (SMS, not chat apps), maps, emergency apps and Android Settings always stay open, and you can end a session early at any time.</li>
     <li>An optional friends leaderboard and an optional AI coach.</li>
   </ul>
   <p>Tenet is free and supported by optional rewarded ads. It is a self-control tool, not a medical or therapeutic service. Not affiliated with or endorsed by YouTube, Instagram, Facebook, Snapchat, TikTok, Moj or Josh.</p>
@@ -91,15 +92,20 @@
   <p>Accounts, backup, the leaderboard and the live coach are all optional.</p>
   <div class="table">
   <table>
-    <tr><th>Feature</th><th>What is sent</th><th>To whom</th><th>Why</th></tr>
+    <caption>What each optional feature sends, to whom and why</caption>
+    <thead>
+    <tr><th scope="col">Feature</th><th scope="col">What is sent</th><th scope="col">To whom</th><th scope="col">Why</th></tr>
+    </thead>
+    <tbody>
     <tr><td>Account (optional)</td><td>Name, email, password (stored hashed by our provider) or a Google sign-in token, account ID; IP address and device details in sign-in logs</td><td>Supabase (our hosting provider); Google, if you use "Sign in with Google"</td><td>Create and secure your account</td></tr>
     <tr><td>Cloud backup (off by default)</td><td>Your plan, goals and focus log. Never app names or per-app usage</td><td>Supabase</td><td>Restore on a new phone</td></tr>
-    <tr><td>Friends leaderboard (optional)</td><td>The display name you choose and four numbers for this week: streak, minutes in social, video and game apps, focus minutes, and reels counted (the reel count comes from the guard). Never app names</td><td>Supabase; shown only to friends you add by invite code and members of groups you create or join</td><td>Compare progress with people you choose</td></tr>
+    <tr><td>Friends leaderboard (optional)</td><td>The display name you choose and four numbers for this week: streak, total minutes in social, video and game apps together (one number, not per app or per type), focus minutes, and reels counted (the reel count comes from the guard). Never app names</td><td>Supabase; shown only to friends you add by invite code and members of groups you create or join</td><td>Compare progress with people you choose</td></tr>
     <tr><td>Live AI coach (optional, signed in)</td><td>Your messages, the feeling you pick, your latest urge note, your onboarding answers (hardest area, hardest time of day, when you want to stop) and a short progress summary (minutes, limits, streak, goals). Never app names</td><td>Supabase, which forwards them to Groq, Inc. (USA) to write the reply</td><td>Coach replies</td></tr>
     <tr><td>Reporting a coach reply</td><td>The reply text, the reason you chose, your account ID</td><td>Supabase</td><td>Make the coach safer</td></tr>
     <tr><td>Review &amp; feedback (optional, signed in)</td><td>Your star rating, what it is about, your message, a reply email if you give one, the app version and your account ID</td><td>Supabase</td><td>Read and answer your feedback, improve the app</td></tr>
+    <tr><td>Reporting a leaderboard name (optional)</td><td>The name or group name you report, the reason, your account ID and the reported account or group</td><td>Supabase</td><td>Review and remove names that break the rules</td></tr>
     <tr><td>Rewarded ads</td><td>Advertising ID, IP address and approximate location, device and app-interaction data, collected by Google's Mobile Ads SDK</td><td>Google (AdMob)</td><td>Show and measure ads, prevent fraud</td></tr>
-    <tr><td>Fonts</td><td>Your IP address, when the app downloads its typefaces</td><td>Google Fonts</td><td>Display text</td></tr>
+  </tbody>
   </table>
   </div>
   <p>We do not sell your personal data. We use no analytics or crash-reporting tools. Coach messages are not stored by us after the reply is written, except replies you report.</p>
@@ -109,19 +115,19 @@
 
   <h3>4. Legal bases (EEA and UK)</h3>
   <ul>
-    <li><strong>Contract:</strong> accounts, backup, leaderboard and coach, which you ask us to provide.</li>
+    <li><strong>Contract:</strong> accounts, backup and the leaderboard, which you ask us to provide.</li>
     <li><strong>Consent:</strong> the live coach, the leaderboard's reel count, and personalised ads where consent is required. You can withdraw consent at any time.</li>
     <li><strong>Legitimate interests:</strong> security, fraud prevention and handling reports.</li>
   </ul>
 
   <h3>5. Service providers and transfers</h3>
-  <p>Supabase, Inc. (hosting, database and sign-in), Groq, Inc. (AI replies, USA) and Google (sign-in, ads and fonts) process data on our behalf or under their own terms. Some of them process data outside your country, including in the USA; where the law requires it, these transfers rely on the providers' standard safeguards, such as Standard Contractual Clauses.</p>
+  <p>Supabase, Inc. (hosting, database and sign-in), Groq, Inc. (AI replies, USA) and Google (sign-in and ads) process data on our behalf or under their own terms. Some of them process data outside your country, including in the USA; where the law requires it, these transfers rely on the providers' standard safeguards, such as Standard Contractual Clauses.</p>
 
   <h3>6. How long we keep data</h3>
   <ul>
     <li>Data on your phone: until you uninstall Tenet or clear its storage.</li>
     <li>Account, backup and leaderboard data: until you delete your account. Leaving the leaderboard deletes your name, numbers, friendships and group memberships at once.</li>
-    <li>Coach reports and feedback: until you delete your account.</li>
+    <li>Coach reports, leaderboard reports and feedback: until you delete your account.</li>
     <li>Coach messages: not stored by us after the reply.</li>
   </ul>
 
@@ -129,7 +135,7 @@
   <p>You can ask to access, correct, export or delete your data, withdraw consent, or object to processing, by emailing <a href="mailto:dev.divya016@gmail.com">dev.divya016@gmail.com</a>. We reply within 30 days. In the app you can delete your account, leave the leaderboard, turn backup off, stop using the live coach and change ad choices. You can also complain to your data protection authority (EEA), the ICO (UK) or, after contacting us first, the Data Protection Board of India.</p>
 
   <h3>8. Security</h3>
-  <p>Data sent from the app is encrypted in transit (HTTPS). Data on our server is protected by per-account access rules, so each account can reach only its own data. No method is perfectly secure.</p>
+  <p>Data sent from the app is encrypted in transit (HTTPS). Data on our server is protected by per-account access rules, so each account can reach only its own data, plus what others choose to share with it on the leaderboard (a friend's or group member's display name and weekly numbers). No method is perfectly secure.</p>
 
   <h3>9. Adults only</h3>
   <p>Tenet is intended for people aged 18 and older and is not directed at children. The app asks you to confirm you are 18 or older before setup. We do not knowingly collect personal data from anyone under 18. If we learn that we have, we delete the account and its data. Contact us if you believe this has happened.</p>
@@ -151,7 +157,7 @@
   <p>Tenet is a self-control tool: it measures your screen time, sets limits you choose and blocks apps you select. It is not a medical, psychological or therapeutic service and does not diagnose or treat any condition. If you are struggling, please talk to a qualified professional, or in an emergency call your local emergency number.</p>
 
   <h3>3. You stay in control</h3>
-  <p>Blocking only happens because you set it up. Calls, messages, maps, emergency apps and Android Settings are never blocked, and you can end a focus session at any time. To stop all blocking, switch off the Tenet guard in Settings &rarr; Accessibility and "Display over other apps" for Tenet, or uninstall the app. Do not rely on Tenet in situations where a blocked app could put anyone at risk.</p>
+  <p>Blocking only happens because you set it up. Calls, text messages (SMS), maps, emergency apps and Android Settings are never blocked (chat apps such as WhatsApp are blocked during a focus session), and you can end a focus session at any time. Limits are locked inside the app on purpose, so a weak moment can't undo them. To stop all blocking, switch off the Tenet guard in Android Settings &rarr; Accessibility and "Display over other apps" for Tenet (Settings &rarr; Apps &rarr; Tenet), or uninstall the app. Android Settings is never blocked, even during a focus session. Do not rely on Tenet in situations where a blocked app could put anyone at risk.</p>
 
   <h3>4. The AI coach</h3>
   <p>The live coach is optional. Its replies are written automatically by an AI model and can be wrong or unsuitable. Do not rely on them for medical, legal or financial decisions. Use the report button in the chat to flag a reply.</p>
@@ -160,7 +166,7 @@
   <p>Keep your sign-in details safe; you are responsible for what happens in your account. You can delete your account at any time (see <a href="#delete-account">Delete your account</a>).</p>
 
   <h3>6. Friends leaderboard</h3>
-  <p>Display names and group names must not be offensive, hateful, sexual or threatening, must not pretend to be someone else, and must not break anyone's rights. We may remove names, groups or accounts that break these rules.</p>
+  <p>Display names and group names must not be offensive, hateful, sexual or threatening, must not pretend to be someone else, and must not break anyone's rights. Long-press a name (or use the group menu) to report it. We may remove names, groups or accounts that break these rules.</p>
 
   <h3>7. Ads and rewards</h3>
   <p>Tenet is free. It shows rewarded ads only when you choose to watch one. Rewards (such as extra minutes) have no cash value and cannot be exchanged.</p>
