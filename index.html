@@ -6,7 +6,7 @@
 <title>Tenet: Scroll With Intent</title>
 <meta name="description" content="Tenet helps you spend less time scrolling with daily app limits, a Shorts and Reels counter and focus sessions. Privacy policy and account deletion.">
 <style>
-  caption { text-align: left; color: var(--muted); padding-bottom: 6px; }
+  .caption { color: var(--muted); margin: 8px 0 4px; }
   :root {
     --bg: #f4f6f1; --card: #ffffff; --fg: #1f2421; --muted: #5b635d;
     --accent: #4a7c0f; --line: #dfe4da;
@@ -67,7 +67,7 @@
     <li>Daily limits for social, video and game apps, with a calm block screen when a limit runs out.</li>
     <li>YouTube stays open; only time in the Shorts player counts.</li>
     <li>A Reels and Shorts counter, streaks, goals and weekly stats.</li>
-    <li>Focus sessions: calls, text messages (SMS, not chat apps), maps, emergency apps and Android Settings always stay open, and you can end a session early at any time.</li>
+    <li>Focus sessions: calls, text messages (SMS, not chat apps), Google Maps, emergency apps and Android Settings always stay open, and you can end a session early at any time.</li>
     <li>An optional friends leaderboard and an optional AI coach.</li>
   </ul>
   <p>Tenet is free and supported by optional rewarded ads. It is a self-control tool, not a medical or therapeutic service. Not affiliated with or endorsed by YouTube, Instagram, Facebook, Snapchat, TikTok, Moj or Josh.</p>
@@ -76,13 +76,13 @@
 <!-- ================= PRIVACY POLICY ================= -->
 <section id="privacy">
   <h2>Privacy policy</h2>
-  <p class="meta">Last updated: 20 November 2026</p>
+  <p class="meta">Last updated: 21 November 2026</p>
 
   <p>This policy explains how Divya Pathak ("we", "us"), the developer of the Android app "Tenet: Scroll With Intent" ("Tenet"), handles personal data. We decide how this data is used (we are the data controller, and in India the "Data Fiduciary"). Contact: <a href="mailto:dev.divya016@gmail.com">dev.divya016@gmail.com</a>.</p>
 
   <h3>1. Data that stays on your phone</h3>
   <ul>
-    <li><strong>Screen time.</strong> With your permission (Android "Usage access"), Tenet reads how long you use each app, to build your plan, show your stats and check your limits. Per-app usage and app names stay on your phone and are never sent to us or anyone else. Only totals per category (for example, minutes in social apps) leave the phone, and only if you join the friends leaderboard or use the live coach (section 2).</li>
+    <li><strong>Screen time.</strong> With your permission (Android "Usage access"), Tenet reads how long you use each app, to build your plan, show your stats and check your limits. Per-app usage and app names stay on your phone and are never sent to us or anyone else. Only totals leave the phone: one combined weekly number if you join the friends leaderboard, and a short progress summary (minutes, limits, streak) if you use the live coach (section 2).</li>
     <li><strong>Which app is open (the Tenet guard).</strong> With your permission (Android "Accessibility"), the guard sees the name of the app on screen so it can block apps over today's limit and keep focus sessions locked. In YouTube, it checks whether the Shorts player is showing. In YouTube, Instagram, Facebook and Snapchat, only while their Reels or Shorts player is on screen, it reads the creator name and caption of the clip to count each clip once; that text is turned into a code in memory straight away and is never stored or sent. In TikTok, Moj and Josh it counts full-screen swipes and reads no text. It never reads your passwords, what you type, or text in any other app. To leave a blocked app or the Shorts player, it may press Home or Back for you. It never blocks Android Settings.</li>
     <li><strong>Your plan, goals, focus sessions, streaks, notes you write, pause choices, settings and the guard history</strong> are stored on your phone.</li>
   </ul>
@@ -90,9 +90,9 @@
 
   <h3>2. Data that leaves your phone</h3>
   <p>Accounts, backup, the leaderboard and the live coach are all optional.</p>
+  <p class="caption" id="sent-table">What each optional feature sends, to whom and why:</p>
   <div class="table">
-  <table>
-    <caption>What each optional feature sends, to whom and why</caption>
+  <table aria-describedby="sent-table">
     <thead>
     <tr><th scope="col">Feature</th><th scope="col">What is sent</th><th scope="col">To whom</th><th scope="col">Why</th></tr>
     </thead>
@@ -147,7 +147,7 @@
 <!-- ================= TERMS OF SERVICE ================= -->
 <section id="terms">
   <h2>Terms of service</h2>
-  <p class="meta">Last updated: 20 November 2026</p>
+  <p class="meta">Last updated: 21 November 2026</p>
   <p>These terms are an agreement between you and Divya Pathak ("we", "us"), the developer of "Tenet: Scroll With Intent" ("Tenet"). By using Tenet you agree to them and to the <a href="#privacy">privacy policy</a>.</p>
 
   <h3>1. Who can use Tenet</h3>
@@ -157,7 +157,7 @@
   <p>Tenet is a self-control tool: it measures your screen time, sets limits you choose and blocks apps you select. It is not a medical, psychological or therapeutic service and does not diagnose or treat any condition. If you are struggling, please talk to a qualified professional, or in an emergency call your local emergency number.</p>
 
   <h3>3. You stay in control</h3>
-  <p>Blocking only happens because you set it up. Calls, text messages (SMS), maps, emergency apps and Android Settings are never blocked (chat apps such as WhatsApp are blocked during a focus session), and you can end a focus session at any time. Limits are locked inside the app on purpose, so a weak moment can't undo them. To stop all blocking, switch off the Tenet guard in Android Settings &rarr; Accessibility and "Display over other apps" for Tenet (Settings &rarr; Apps &rarr; Tenet), or uninstall the app. Android Settings is never blocked, even during a focus session. Do not rely on Tenet in situations where a blocked app could put anyone at risk.</p>
+  <p>Blocking only happens because you set it up. Calls, text messages (SMS), Google Maps, emergency apps and Android Settings are never blocked (chat apps such as WhatsApp are blocked during a focus session), and you can end a focus session at any time. Limits are locked inside the app on purpose, so a weak moment can't undo them. To stop all blocking, switch off the Tenet guard in Android Settings &rarr; Accessibility and "Display over other apps" for Tenet (Settings &rarr; Apps &rarr; Tenet), or uninstall the app. Android Settings is never blocked, even during a focus session. Do not rely on Tenet in situations where a blocked app could put anyone at risk.</p>
 
   <h3>4. The AI coach</h3>
   <p>The live coach is optional. Its replies are written automatically by an AI model and can be wrong or unsuitable. Do not rely on them for medical, legal or financial decisions. Use the report button in the chat to flag a reply.</p>
